@@ -1,0 +1,31 @@
+{
+  "name": "style-definitions",
+  "description": "Definitions for commonly used css patterns",
+  "keywords": [
+    "css",
+    "style",
+    "typescript",
+    "layout",
+    "typography"
+  ],
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "20.0.1",
+    "@types/react": "^15.0.30",
+    "glamorous": "^3.23.4",
+    "tscomp": "^0.11.2",
+    "typescript": "2.4"
+  },
+  "tscomp": {
+    "mode": "lib"
+  },
+  "scripts": {
+    "build": "tscomp build",
+    "test": "tscomp test",
+    "eject": "tscomp eject",
+    "watch": "tscomp watch"
+  },
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts"
+}
