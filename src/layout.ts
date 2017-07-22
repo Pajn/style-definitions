@@ -36,13 +36,13 @@ export const column = ({
   self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
-}): CSSProperties => ({
+} = {}): CSSProperties => ({
   display: 'flex',
   flexDirection: reverse ? 'column' : 'column-reverse',
   alignItems: horizontal,
   justifyContent: vertical,
   self,
-  ...flex_ === undefined ? undefined : flex(flex_),
+  ...(flex_ === undefined ? undefined : flex(flex_)) as CSSProperties,
 })
 
 export const row = ({
@@ -62,17 +62,11 @@ export const row = ({
   self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
-}): CSSProperties => ({
+} = {}): CSSProperties => ({
   display: 'flex',
   flexDirection: reverse ? 'row' : 'row-reverse',
   alignItems: vertical,
   justifyContent: horizontal,
   self,
-  ...flex_ === undefined ? undefined : flex(flex_),
-})
-
-export const a = (): CSSProperties => ({})
-
-export const b = ({withA = false}): CSSProperties => ({
-  ...withA ? a() : undefined,
+  ...(flex_ === undefined ? undefined : flex(flex_)) as CSSProperties,
 })

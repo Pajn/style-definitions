@@ -1,6 +1,8 @@
 {
   "name": "style-definitions",
   "description": "Definitions for commonly used css patterns",
+  "author": "Rasmus Eneman <rasmus@eneman.eu>",
+  "repository": "Pajn/style-definitions",
   "keywords": [
     "css",
     "style",
@@ -8,7 +10,7 @@
     "layout",
     "typography"
   ],
-  "version": "0.1.0",
+  "version": "0.1.2",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "20.0.1",
