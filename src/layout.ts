@@ -38,7 +38,7 @@ export const column = ({
   flex?: number | boolean | {grow?: number; shrink?: number}
 } = {}): CSSProperties => ({
   display: 'flex',
-  flexDirection: reverse ? 'column' : 'column-reverse',
+  flexDirection: reverse ? 'column-reverse' : 'column',
   alignItems: horizontal,
   justifyContent: vertical,
   self,
@@ -64,7 +64,7 @@ export const row = ({
   flex?: number | boolean | {grow?: number; shrink?: number}
 } = {}): CSSProperties => ({
   display: 'flex',
-  flexDirection: reverse ? 'row' : 'row-reverse',
+  flexDirection: reverse ? 'row-reverse' : 'row',
   alignItems: vertical,
   justifyContent: horizontal,
   self,
