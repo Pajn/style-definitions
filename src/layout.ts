@@ -68,3 +68,15 @@ export const row = ({
   self,
   ...(flex_ === undefined ? undefined : flex(flex_)),
 })
+
+export const fill = ({padding = 0}) => ({
+  position: 'absolute' as 'absolute',
+
+  top: padding,
+  left: padding,
+  right: padding,
+  bottom: padding,
+})
+
+export const center = row({horizontal: 'center', vertical: 'center'})
+export const circle = (radius: number) => ({width: radius, height: radius, borderRadius: '50%'})
