@@ -3,7 +3,7 @@
   "description": "Definitions for commonly used css patterns as plain js objects",
   "author": "Rasmus Eneman <rasmus@eneman.eu>",
   "repository": "Pajn/style-definitions",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "keywords": [
     "css",
     "style",
