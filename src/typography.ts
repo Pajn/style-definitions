@@ -1,5 +1,5 @@
 export const ellipsis = {
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
+  overflow: 'hidden' as 'hidden',
+  textOverflow: 'ellipsis' as 'ellipsis',
+  whiteSpace: 'nowrap' as 'nowrap',
 }

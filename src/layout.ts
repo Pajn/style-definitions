@@ -1,8 +1,6 @@
-import {CSSProperties} from 'glamorous'
-
 export const flex = (
   flex: number | boolean | {grow?: number; shrink?: number},
-): CSSProperties => ({
+) => ({
   flexGrow: flex === true
     ? 1
     : flex === false
@@ -36,13 +34,13 @@ export const column = ({
   self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
-} = {}): CSSProperties => ({
-  display: 'flex',
-  flexDirection: reverse ? 'column-reverse' : 'column',
+} = {}) => ({
+  display: 'flex' as 'flex',
+  flexDirection: reverse ? 'column-reverse' as 'column-reverse' : 'column' as 'column',
   alignItems: horizontal,
   justifyContent: vertical,
   self,
-  ...(flex_ === undefined ? undefined : flex(flex_)) as CSSProperties,
+  ...(flex_ === undefined ? undefined : flex(flex_)),
 })
 
 export const row = ({
@@ -62,11 +60,11 @@ export const row = ({
   self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
-} = {}): CSSProperties => ({
-  display: 'flex',
-  flexDirection: reverse ? 'row-reverse' : 'row',
+} = {}) => ({
+  display: 'flex' as 'flex',
+  flexDirection: reverse ? 'row-reverse' as 'row-reverse' : 'row' as 'row',
   alignItems: vertical,
   justifyContent: horizontal,
   self,
-  ...(flex_ === undefined ? undefined : flex(flex_)) as CSSProperties,
+  ...(flex_ === undefined ? undefined : flex(flex_)),
 })
