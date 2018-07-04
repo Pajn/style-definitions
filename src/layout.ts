@@ -69,7 +69,7 @@ export const row = ({
   ...(flex_ === undefined ? undefined : flex(flex_)),
 })
 
-export const fill = ({padding = 0}) => ({
+export const fill = ({padding = 0} = {}) => ({
   position: 'absolute' as 'absolute',
 
   top: padding,
