@@ -1,3 +1,4 @@
+import React from 'react'
 import {column, row} from './layout'
 
 describe('layout', () => {
@@ -9,6 +10,10 @@ describe('layout', () => {
     it('should order reversed if specified', () => {
       expect(row({reverse: true}).flexDirection).toBe('row-reverse')
     })
+
+    it('should be assigable to the style attribute', () => {
+      expect(<div style={{...row()}} />)
+    })
   })
 
   describe('column', () => {
@@ -18,6 +23,10 @@ describe('layout', () => {
 
     it('should order reversed if specified', () => {
       expect(column({reverse: true}).flexDirection).toBe('column-reverse')
+    })
+
+    it('should be assigable to the style attribute', () => {
+      expect(<div style={{...column()}} />)
     })
   })
 })

@@ -20,7 +20,7 @@ export const flex = (
 export const column = ({
   horizontal,
   vertical,
-  self,
+  alignSelf,
   reverse,
   flex: flex_,
 }: {
@@ -31,7 +31,7 @@ export const column = ({
     | 'flex-end'
     | 'space-between'
     | 'space-around'
-  self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
+  alignSelf?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
 } = {}) => ({
@@ -39,14 +39,14 @@ export const column = ({
   flexDirection: reverse ? 'column-reverse' as 'column-reverse' : 'column' as 'column',
   alignItems: horizontal,
   justifyContent: vertical,
-  self,
+  alignSelf,
   ...(flex_ === undefined ? undefined : flex(flex_)),
 })
 
 export const row = ({
   horizontal,
   vertical,
-  self,
+  alignSelf,
   reverse,
   flex: flex_,
 }: {
@@ -57,7 +57,7 @@ export const row = ({
     | 'space-between'
     | 'space-around'
   vertical?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
-  self?: 'center' | 'flex-start' | 'flex-end' | 'stretch'
+  alignSelf?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline'
   reverse?: boolean
   flex?: number | boolean | {grow?: number; shrink?: number}
 } = {}) => ({
@@ -65,7 +65,7 @@ export const row = ({
   flexDirection: reverse ? 'row-reverse' as 'row-reverse' : 'row' as 'row',
   alignItems: vertical,
   justifyContent: horizontal,
-  self,
+  alignSelf,
   ...(flex_ === undefined ? undefined : flex(flex_)),
 })
 
