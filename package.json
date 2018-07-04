@@ -13,12 +13,12 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "21.1.5",
-    "@types/react": "^16.0.18",
-    "tscomp": "^0.13.6",
-    "tslint": "^5.8.0",
+    "@types/jest": "23.1.4",
+    "@types/react": "^16.4.6",
+    "tscomp": "^0.15.3",
+    "tslint": "^5.10.0",
     "tslint-config-pajn": "^1.0.0",
-    "typescript": "2.5.3"
+    "typescript": "2.9.2"
   },
   "tscomp": {
     "mode": "lib"
